@@ -1,14 +1,17 @@
 # Around The U.S. (Alrededor de los EE. UU.)
 
 Red social de perfil con galería de fotos de lugares de los Estados Unidos. El usuario puede
-editar su perfil (nombre y descripción) desde una ventana emergente, con los datos reflejados
-al instante en la página. Desarrollado con JavaScript puro, sin librerías ni frameworks.
+editar su perfil (nombre y descripción), agregar nuevas tarjetas y ampliar las imágenes desde
+ventanas emergentes. Desarrollado con JavaScript puro, sin librerías ni frameworks.
 
 ## ✨ Funcionalidad
 
 - Edición del perfil: nombre y "Acerca de mí" se actualizan en vivo mediante un modal.
 - Ventanas emergentes (modales) reutilizables y rellenadas con los datos actuales del usuario.
-- Galería de tarjetas de fotos generada a partir de un array de datos.
+- Galería de tarjetas generada a partir de un `<template>` HTML y un array de datos.
+- Agregar nuevas tarjetas desde el modal "Nuevo lugar" (aparecen como primer elemento).
+- Botones "Me gusta" (♥) que cambian de color al hacer clic y botón de eliminación de tarjetas.
+- Ampliación de imágenes: al hacer clic en una foto se abre un modal con la imagen y su título.
 - Código orientado a funciones de propósito único y manipulación del DOM con `textContent`
   (sin `innerHTML`, previniendo la inyección de datos no seguros).
 
