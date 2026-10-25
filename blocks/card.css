@@ -27,9 +27,15 @@
 }
 
 .card__image {
+  width: 100%;
   min-height: 282px;
   max-height: 282px;
   object-fit: cover;
+  cursor: pointer;
+}
+
+.card__image:hover {
+  opacity: 0.9;
 }
 
 .card__like-button {
@@ -66,5 +72,6 @@
 }
 
 .card__like-button_is-active {
-  background: transparent url("../images/like-active.svg") no-repeat;
+  background: transparent url("../images/like-active.svg") center / 21px 18px
+    no-repeat;
 }
