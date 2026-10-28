@@ -20,42 +20,54 @@ y ampliar las imágenes en una ventana emergente.
 
 - HTML5
 - CSS3 con metodología BEM, Flexbox y Grid
-- JavaScript con módulos ES
+- TypeScript
+- Programación orientada a objetos: clases, encapsulamiento y herencia
+- Módulos ES
 - Git y GitHub
 
 ## Cómo ejecutar
 
-El proyecto utiliza módulos de JavaScript, por lo que debe abrirse desde un servidor local.
+El proyecto compilado se encuentra en la carpeta `public`, por lo que debe abrirse desde un
+servidor local:
 
 ```bash
 git clone https://github.com/iam-jaguer/web_project_around_es.git
 cd web_project_around_es
-python3 -m http.server 8000
+python3 -m http.server 8000 --directory public
 ```
 
 Después, abre `http://localhost:8000` en el navegador. También puedes usar la extensión Live
-Server de Visual Studio Code. No requiere instalación de dependencias.
+Server de Visual Studio Code.
+
+Para compilar los archivos de `src` después de modificarlos, ejecuta:
+
+```bash
+npx tsc
+```
 
 ## Estructura
 
 ```text
-├── index.html
-├── pages/
-│   └── index.css
-├── blocks/
-│   ├── card.css
-│   ├── cards.css
-│   ├── content.css
-│   ├── footer.css
-│   ├── header.css
-│   ├── page.css
-│   ├── popup.css
-│   └── profile.css
-├── scripts/
+├── public/
+│   ├── index.html
 │   ├── index.js
-│   └── validate.js
-├── images/
-└── vendor/
+│   ├── blocks/
+│   ├── images/
+│   ├── pages/
+│   └── vendor/
+├── src/
+│   ├── index.ts
+│   ├── Card.ts
+│   ├── FormValidator.ts
+│   ├── Popup.ts
+│   ├── PopupWithForm.ts
+│   ├── PopupWithImage.ts
+│   ├── Section.ts
+│   ├── UserInfo.ts
+│   └── utils/
+│       └── constants.ts
+├── tsconfig.json
+└── README.md
 ```
 
 Proyecto académico del programa de desarrollo web de TripleTen.
