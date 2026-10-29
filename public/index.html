@@ -19,11 +19,24 @@
       </header>
       <main class="content">
         <section class="profile page__section">
-          <img
-            alt="Avatar de Jacques Cousteau"
-            class="profile__image"
-            src="./images/avatar.jpg"
-          />
+          <button
+            aria-label="Cambiar foto de perfil"
+            class="profile__avatar-button"
+            type="button"
+          >
+            <img
+              alt="Avatar de Jacques Cousteau"
+              class="profile__image"
+              src="./images/avatar.jpg"
+            />
+            <span class="profile__avatar-overlay">
+              <img
+                alt=""
+                class="profile__avatar-edit-icon"
+                src="./images/edit-icon.svg"
+              />
+            </span>
+          </button>
           <div class="profile__info">
             <h1 class="profile__title">Jacques Cousteau</h1>
             <button
@@ -65,7 +78,7 @@
         <p class="footer__copyright">© 2025 Around The U.S.</p>
       </footer>
       <div class="popup" id="edit-popup">
-        <div class="popup__content">
+        <div class="popup__content popup__content_type_edit">
           <button
             aria-label="Cerrar ventana emergente"
             class="popup__close"
@@ -110,7 +123,7 @@
         </div>
       </div>
       <div class="popup" id="new-card-popup">
-        <div class="popup__content">
+        <div class="popup__content popup__content_type_new-card">
           <button
             aria-label="Cerrar ventana emergente"
             class="popup__close"
@@ -149,6 +162,49 @@
             >
               Crear
             </button>
+          </form>
+        </div>
+      </div>
+      <div class="popup" id="avatar-popup">
+        <div class="popup__content popup__content_type_avatar">
+          <button
+            aria-label="Cerrar ventana emergente"
+            class="popup__close"
+            type="button"
+          ></button>
+          <h3 class="popup__title">Cambiar foto de perfil</h3>
+          <form class="popup__form" id="avatar-form" novalidate>
+            <label class="popup__field">
+              <input
+                class="popup__input popup__input_type_avatar"
+                id="avatar-link"
+                name="avatar"
+                placeholder="Enlace a la nueva foto"
+                required
+                type="url"
+              />
+              <span class="popup__error" id="avatar-link-error"></span>
+            </label>
+            <button
+              class="button popup__button popup__button_disabled"
+              disabled
+              type="submit"
+            >
+              Guardar
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="popup" id="confirm-popup">
+        <div class="popup__content popup__content_type_confirm">
+          <button
+            aria-label="Cerrar ventana emergente"
+            class="popup__close"
+            type="button"
+          ></button>
+          <h3 class="popup__title">¿Estás seguro?</h3>
+          <form class="popup__form" id="confirm-form" novalidate>
+            <button class="button popup__button" type="submit">Sí</button>
           </form>
         </div>
       </div>

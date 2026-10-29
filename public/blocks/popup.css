@@ -45,14 +45,14 @@
 }
 
 .popup__close {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   background: transparent url("../images/close.svg") center no-repeat;
-  background-size: 35px 35px;
+  background-size: 40px 40px;
   border: none;
   position: absolute;
-  top: -39px;
-  right: -37px;
+  top: -47px;
+  right: -56px;
   padding: 0;
   margin: 0;
   cursor: pointer;
@@ -71,6 +71,27 @@
   position: relative;
   box-sizing: border-box;
   padding: 34px 36px;
+}
+
+.popup__content_type_avatar {
+  min-height: 272px;
+}
+
+.popup__content_type_edit .popup__button,
+.popup__content_type_new-card .popup__button {
+  margin-top: 49px;
+}
+
+.popup__content_type_confirm {
+  min-height: 181px;
+}
+
+.popup__content_type_confirm .popup__form {
+  margin-top: 31px;
+}
+
+.popup__content_type_confirm .popup__button {
+  margin-top: 0;
 }
 
 .popup__form {
